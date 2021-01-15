@@ -3,15 +3,15 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    
     <groupId>cn.metsea</groupId>
     <artifactId>lotus</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-
+    
     <name>${project.artifactId}</name>
     <description>distributed job scheduler platform for big data industry</description>
-
+    
     <modules>
         <module>lotus-api</module>
         <module>lotus-common</module>
@@ -22,7 +22,7 @@
         <module>lotus-server</module>
         <module>lotus-service</module>
     </modules>
-
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -45,8 +45,9 @@
         <oshi.core.version>3.5.0</oshi.core.version>
         <lombok.version>1.18.16</lombok.version>
         <junit.version>4.13.1</junit.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
     </properties>
-
+    
     <dependencyManagement>
         <dependencies>
             <!-- project modules -->
@@ -80,7 +81,7 @@
                 <artifactId>lotus-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
+            
             <!-- spring modules -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -99,28 +100,28 @@
                 <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
-
+            
             <!-- jackson -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
-
+            
             <!-- mysql -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-
+            
             <!-- druid -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
             </dependency>
-
+            
             <!-- mybatis-plus -->
             <dependency>
                 <groupId>com.baomidou</groupId>
@@ -137,21 +138,21 @@
                 <artifactId>mybatis-plus-annotation</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
-
+            
             <!-- netty -->
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${netty.version}</version>
             </dependency>
-
+            
             <!-- quartz -->
             <dependency>
                 <groupId>org.quartz-scheduler</groupId>
                 <artifactId>quartz</artifactId>
                 <version>${quartz.version}</version>
             </dependency>
-
+            
             <!-- zookeeper -->
             <dependency>
                 <groupId>org.apache.zookeeper</groupId>
@@ -178,7 +179,7 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-
+            
             <!-- curator -->
             <dependency>
                 <groupId>org.apache.curator</groupId>
@@ -196,28 +197,28 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-
+            
             <!-- guava -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
-
+            
             <!-- oshi -->
             <dependency>
                 <groupId>com.github.oshi</groupId>
                 <artifactId>oshi-core</artifactId>
                 <version>${oshi.core.version}</version>
             </dependency>
-
+            
             <!-- lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-
+            
             <!-- log -->
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -229,7 +230,7 @@
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
             </dependency>
-
+            
             <!-- Junit -->
             <dependency>
                 <groupId>junit</groupId>
@@ -237,9 +238,16 @@
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
+            <!-- commons-collections -->
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+        
         </dependencies>
     </dependencyManagement>
-
+    
     <build>
         <pluginManagement>
             <plugins>
